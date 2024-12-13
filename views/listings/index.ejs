@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>  
+
+<body>
+    <h1 class="heading">Find What Suits You Best!
+    </h1>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+    <%  for(let listings of alllisting){ %>
+        <a   href="/listing/<%=listings.id%>" class="index">
+        <div class="card col" style="width: 20rem">
+            <img 
+  src="<%= listings.image && listings.image.url ? listings.image.url : 'https://via.placeholder.com/300?text=No+Image+Available' %>" 
+  class="card-img" 
+/>
+        <div class="card-body">
+            <p class="card-text">
+                $<%=listings.price%>    
+           </p>
+           <p class="title">
+            <%=listings.title%> <br>
+           </p>
+           <p class="city">
+            <%=listings.location%> <br>
+           </p>
+          </div>
+        </div>   
+    </a> 
+    <% } %>
+</div>    
+</body>

@@ -1,0 +1,16 @@
+<% if (successMsg.length > 0) { %>
+    <div class="alert alert-warning alert-dismissible fade show col-6 offset-3 bg-light flash" role="alert">
+         <h3 class="flash-sucess"><%= successMsg %></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> 
+<% } %>
+<% if (errorMsg.length > 0) { %>
+    <div class="alert alert-warning alert-dismissible fade show col-6 offset-3 bg-light flash" role="alert">
+         <h3 class="flash-error"><%= errorMsg %></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> 
+<% } %>
+<!-- Include Bootstrap 5 bundle with popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+ 

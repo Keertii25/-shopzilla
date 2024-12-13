@@ -1,0 +1,36 @@
+
+  <nav class="navbar navbar-expand-md sticky-top" style="background-color: rgb(7, 2, 23);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="color: white;"><img src="/assets/villa.png" class="nav-img"></a>
+
+      <button 
+        class="navbar-toggler collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNavAltMarkup" 
+        aria-controls="navbarNavAltMarkup" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+        style="border: 1px solid white; color: white;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" style="color: white;" aria-current="page" href="/">Home</a>
+          <a class="nav-link" style="color: white;" href="/listing">All hotels</a>
+          <a class="nav-link" style="color: white;" href="/listing/new">Add new Hotel</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!Currentuser) {%>
+          <a class="nav-link active" style="color: white;" aria-current="page" href="/signup">Signup</a>
+          <a class="nav-link" style="color: white;" href="/login">Login</a>
+          <%}%>
+          <% if(Currentuser) {%>
+            <a class="nav-link" style="color: white;" href="/logout">Logout</a>
+            <%}%>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+  

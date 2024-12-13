@@ -1,0 +1,99 @@
+<% layout('layouts/boilerplate') %>
+<body>
+  <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-md-8 ">
+        <h1 class="heading">Add Your Hotel</h1>
+
+        <form method="POST" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+          <!-- Title Field -->
+          <div class="mb-3">
+            <label for="title" class="form-label text-white">Title</label>
+            <input 
+              name="listing[title]" 
+              id="title" 
+              class="form-control custom-input" 
+              placeholder="Enter title" 
+              type="text" 
+              required>
+            <div class="invalid-feedback">Title is required.</div>
+          </div>
+
+          <!-- Description Field -->
+          <div class="mb-3">
+            <label for="description" class="form-label text-white">Description</label>
+            <textarea 
+              name="listing[description]" 
+              id="description" 
+              class="form-control custom-input" 
+              placeholder="Enter description" 
+              required></textarea>
+            <div class="invalid-feedback">Description is required.</div>
+          </div>
+
+          <!-- Image Link Field -->
+          <div class="mb-3">
+            <label for="image" class="form-label text-white">Image</label>
+            <input 
+              name="listing[image]" 
+              id="image" 
+              class="form-control custom-input" 
+              type="file">
+            <div class="invalid-feedback">Insert an image</div>
+          </div>
+
+          <!-- Price and Country Fields in the Same Row -->
+          <div class="row">
+            <!-- Price Field -->
+            <div class="col-md-6 mb-3">
+              <label for="price" class="form-label text-white">Price</label>
+              <input 
+                name="listing[price]" 
+                id="price" 
+                class="form-control custom-input" 
+                placeholder="Enter price" 
+                type="number" 
+                required>
+              <div class="invalid-feedback">Price is required and must be a valid number.</div>
+            </div>
+
+            <!-- Country Field -->
+            <div class="col-md-6 mb-3">
+              <label for="country" class="form-label text-white">Country</label>
+              <input 
+                name="listing[country]" 
+                id="country" 
+                class="form-control custom-input" 
+                placeholder="Enter country" 
+                type="text" 
+                required>
+              <div class="invalid-feedback">Country is required.</div>
+            </div>
+          </div>
+
+          <!-- Location Field -->
+          <div class="mb-3">
+            <label for="location" class="form-label text-white">Location</label>
+            <input 
+              name="listing[location]" 
+              id="location" 
+              class="form-control custom-input" 
+              placeholder="Enter location" 
+              type="text" 
+              required>
+            <div class="invalid-feedback">Location is required.</div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-flex justify-content-start">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <script src="/js/script.js"></script>
+</body>

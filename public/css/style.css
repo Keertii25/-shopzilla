@@ -1,0 +1,605 @@
+body{
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+  background-color: rgb(7, 2, 23) !important;
+}
+
+.container{
+  flex: 1;
+  border: none;
+}
+
+.heading{
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Set white color for the hamburger icon */
+/* Make the navbar-toggler icon white */
+
+.flash-sucess{
+  color:rgb(39, 198, 39)  !important;
+  
+  
+  
+}
+.flash-error{
+  color:rgb(230, 92, 92)  !important; 
+}
+.prev-image{
+  height: 150px !important;
+  width: 200px !important;
+}
+
+.card{
+ border: 1px solid white !important;
+  background-color: rgb(7, 2, 23) !important;
+  margin: 15px;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+  /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  opacity: 0.7;  /* Dull effect on hover */
+}
+
+.index{
+  text-decoration: none;
+  
+}
+
+.card-text{
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  margin-bottom: 5px;  /* Reduce the bottom margin between the price and title */
+}
+.card-body{
+  margin-left: 20px ;
+}
+.text-blue{
+  color:rgb(38, 179, 205);
+}
+
+
+.city{
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: lighter;
+  margin: 0;  /* Remove unnecessary space around city text */
+}
+
+.title{
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0;  /* Remove unnecessary space around title text */
+}
+
+.card-img{
+  height: 300px;
+  width: 300px;
+}
+
+.show-image{
+  height: 300px;
+  width: 400px;
+}
+/* FOOTER */
+
+footer {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+}
+
+.F-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Social Icons Styling */
+.f-info-socials i {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.f-info-socials i:hover {
+  color: #00acee; /* Optional: Highlight color on hover */
+}
+
+/* Links Styling */
+.f-info-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.hello{
+  background-color: #fefefe;
+}
+
+.f-info-links a:hover {
+  color: #00acee; /* Optional: Highlight color on hover */
+}
+.nav-img{
+  width: 40px;
+  height: 40px;
+  padding-bottom: 5px;
+}
+ /* show page */
+ 
+ .img {
+  display: flex; /* Flexbox to align the children horizontally */
+  justify-content: space-between; /* Distribute space between the left and right sections */
+  width: 100%;
+  height: 500px;
+  border-radius: 13px;
+  gap: 10px;
+}
+
+.left-images {
+  flex: 2; /* Occupy 2/3 of the available width */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.right-images {
+  flex: 1; /* Occupy 1/3 of the available width */
+  display: flex;
+  height: 245px;
+  border-radius: 13px;
+  gap: 10px;
+  flex-direction: column; /* Stack images vertically */
+  justify-content: space-between; /* Space out the images equally */
+}
+
+/* Make images responsive */
+.card-img-top {
+  width: 100%; /* Make the images responsive */
+  height: 100%; /* Ensure images cover the container's height */
+  object-fit: cover; /* Prevent distortion */
+}
+
+/* Styling for the buttons (edit, delete) */
+.bbb {
+  margin-left: 25px !important;
+}
+/* Normal state of the textarea */
+textarea.form-control {
+  background-color: transparent; /* Make background transparent */
+  color: white; /* Make text white */
+  border: 1px solid white; /* Add border to make it more visible if needed */
+  padding: 10px; /* Add padding */
+  resize: vertical; /* Allow vertical resizing */
+  width: 100%; /* Ensure it takes full width */
+}
+
+/* On hover, keep the background transparent */
+textarea.form-control:hover {
+  background-color: transparent;
+  color: white; /* Keep text white */
+}
+
+/* On focus, keep background transparent and text white */
+textarea.form-control:focus {
+  background-color: transparent;
+  color: white; /* Ensure text stays white when typing */
+  outline: none; /* Optional: Remove default outline on focus */
+  border: 1px solid #ccc; /* Optional: Change border on focus for better visibility */
+}
+
+/* Optional: Fix text selection color */
+textarea.form-control::selection {
+  background-color: rgba(255, 255, 255, 0.3); /* Light transparent white background */
+  color: white; /* Keep the text color white when selected */
+}
+
+/* Optional: Set the background color when text is being written */
+textarea.form-control:focus, textarea.form-control:active {
+  background-color: transparent;
+}
+
+
+
+
+/* Responsive Design (Mobile First) */
+@media (max-width: 768px) {
+  .row-cols-sm-1 {
+   justify-content: center;
+ }
+ .card{
+  margin-left: 0px;
+ }
+
+ 
+  .img {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    height: auto;
+    justify-content:center;  
+   /* Let height adjust naturally */
+  }
+  
+
+  .left-images,
+  .right-images {
+    flex: 1; /* Both sections take up equal width */
+  }
+
+  .card-body {
+    text-align: center; /* Center text in the card */
+  }
+
+  .bbb {
+    margin-left: 0 !important; /* Adjust margin for small screens */
+    margin-top: 20px;
+  }
+
+  .col-8 {
+    width: 100% !important; /* Full width for the review section on small screens */
+  }
+   
+  .card {
+    width: 100% !important; /* Ensure cards take up the full width */
+  }
+  .bbb {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* Smaller screens - tablets and below */
+@media (max-width: 576px) {
+  .card{
+   
+    justify-content:center; 
+  }
+  .img {
+    flex-direction: column;
+    height: auto;
+    justify-content:center;  
+  }
+
+  .left-images,
+  .right-images {
+    flex: 1;
+    width: 100%;
+  }
+
+  .card-body h5, .card-body h6 {
+    font-size: 1.2rem; /* Smaller font size on mobile */
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .starability-slot input {
+    margin-right: 10px; /* Space between radio buttons for ratings */
+  }
+
+  .starability-slot label {
+    font-size: 0.9rem; /* Adjust label size for mobile */
+  }
+
+}
+@media (max-width: 576px) {
+  textarea.form-control {
+    max-width: 100%; /* Ensure it doesn't stretch too much on small screens */
+    font-size: 0.9rem; /* Smaller font size on mobile for better readability */
+  }
+}
+
+
+
+
+/* home section css */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #fefefe;
+  --primary-color-dark: #ffffff;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Bebas Neue", sans-serif;
+} 
+
+
+.header__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding-block: 2rem 2rem;
+  padding-inline: 1rem;
+  display: grid;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+.header__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.header__image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("assets/header-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.header__image img {
+  
+  max-width: 520px;
+  margin-left: 100px;
+  /* margin-inline: auto; */
+}
+
+.header__image__card {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  background-color: var(--white);
+  white-space: nowrap;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.header__image__card span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:rgb(19, 12, 50);
+  /* color: var(--primary-color); */
+}
+
+.header__image__card-1 {
+  top: 25%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.header__image__card-2 {
+  top: 10%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.header__image__card-3 {
+  top: 60%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.header__image__card-4 {
+  top: 70%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color:#ffffff;
+  line-height: 5.5rem;
+  text-align: center;
+}
+
+.header__content h1 span {
+  color: rgba(49, 229, 249, 0.705);
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: rgb(255, 255, 255);
+  columns: var(--text-light);
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.header__content form {
+  margin-bottom: 4rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem 0;
+  border-radius: calc(1rem + 10px);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header__content .input__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.header__content .input__group {
+  flex: 1;
+}
+
+.header__content .input__group h5 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.header__content .input__group > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__content input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.header__content input::placeholder {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.header__content .input__group span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(49, 229, 249, 0.705);
+}
+
+.header__content button {
+  width: 100%;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--white);
+  
+  background-color: rgba(49, 229, 249, 0.705);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__content button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.header__content .bar {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: center;
+}
+.our-image{
+
+        display: flex;
+        width: 100%;
+     
+}
+
+@media (width > 768px) {
+
+  
+
+  .sign__up {
+    color: var(--text-dark);
+    background-color: transparent;
+  }
+
+  .sign__up:hover {
+    color: var(--primary-color);
+  }
+
+  .sign__in {
+    color: var(--white);
+    background-color: var(--primary-color);
+  }
+
+  .sign__in:hover {
+    background-color: var(--primary-color-dark);
+  }
+
+  .header__container {
+    padding-block: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .header__content :is(h1, p, .bar) {
+    text-align: left;
+  }
+}
+
+@media (width > 1024px) {
+  .header__content form {
+    flex-direction: row;
+  }
+
+  .header__content button {
+    width: fit-content;
+  }
+}
+
+/* form of the new and the edit */
+
+.btn{
+  width: 100px !important;
+  
+}
+.custom-input {
+ background-color: transparent !important; /* Always transparent */
+ border: 1px solid white !important;      /* White border */
+ color: white !important;                 /* White text */
+}
+
+.custom-input::placeholder {
+ color: rgba(255, 255, 255, 0.6) !important; /* Slightly transparent placeholder text */
+}
+
+.custom-input:focus {
+ background-color: transparent !important; /* Prevent white background on focus */
+ box-shadow: none !important;              /* Remove focus shadow */
+ outline: none !important;                 /* Remove focus outline */
+ border-color: white !important;           /* Keep white border */
+}
+
+.custom-input:not(:placeholder-shown) {
+ background-color: transparent !important;
+ color:white  !important;/* Prevent white background when text is entered */
+}
+
+.custom-input:valid {
+ background-color: transparent !important; /* Prevent white background when valid */
+ color:white !important;
+}
+.text-white {
+  color: white !important;
+}
+
+.prev-image {
+  max-width: 100% !important;
+  border: 1px solid white !important;
+  border-radius: 5px !important;
+}
+
